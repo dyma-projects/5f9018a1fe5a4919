@@ -1,0 +1,28 @@
+<section>
+
+  <p>
+    <span>{{ title }} de </span>
+    <span [class.userName--named]="isLogged" class="userName"> {{userName}} </span>
+  </p>
+
+
+  <form [class.hide]="isLogged">
+
+    <div class="form-group">
+
+      <label for="currentUserName">Dénomination</label>
+      <input type="text" class="form-control"
+             id="currentUserName"
+             placeholder="John DOE"
+             #inputName
+             [value]="userName"
+             (input)="name(inputName.value)">
+    </div>
+
+    <button type="button"
+            (click)="login()"
+            class="btn btn-primary">Valider
+    </button>
+  </form>
+
+</section>

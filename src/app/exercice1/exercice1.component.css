@@ -1,0 +1,9 @@
+.userName {
+  color: #CCC;
+}
+
+.userName--named {
+  color: inherit;
+  font-weight: bold;
+
+}
