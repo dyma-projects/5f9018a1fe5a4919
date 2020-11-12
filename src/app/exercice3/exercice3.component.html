@@ -1,6 +1,10 @@
 <section>
-  <p>P1</p>
-  <p>P2</p>
+
+  <p *ngIf="statut else P2">P1</p>
+
+  <ng-template #P2>
+    <p>P2</p>
+  </ng-template>
 
   <button type="button" (click)="inverserStatut()" class="btn">InverserStatut</button>
 
